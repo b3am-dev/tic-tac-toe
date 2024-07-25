@@ -1,0 +1,33 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  margin: 20px auto;
+  gap: 2px;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resetButton {
+  background-color: #000000;
+  color: #bdc0cf;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.1s;
+  height: 48px;
+  width: 160px;
+
+  &:hover {
+    font-size: 18px;
+    background-color: #222;
+  }
+}

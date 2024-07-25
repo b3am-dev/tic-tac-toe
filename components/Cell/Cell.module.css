@@ -1,0 +1,24 @@
+.cell {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 72px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 100px;
+
+  transition: all 0.2s ease-in-out;
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  &:disabled {
+    transform: scale(1);
+  }
+}

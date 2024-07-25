@@ -1,0 +1,27 @@
+.container {
+  color: #f0f0f0;
+
+  padding: 20px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.button {
+  background-color: #000000;
+  color: #bdc0cf;
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.1s;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 20px;
+
+  &:hover {
+    background-color: #222;
+  }
+}
