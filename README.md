@@ -1,40 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Front End Developer Interview Task: Tic Tac Toe Application with Next.js CSR and Unit Testing
+Objective
+
+Build a Tic Tac Toe application using Next.js. The application should be fully functional and cover all essential unit test cases.
+
+## Requirements
+1. Functional Requirements:
+  - [X] The game should have a 3x3 grid.
+  - [X] Players should be able to click on a cell to mark it with "X" or "O".
+  - [X] The game should alternate turns between the two players.
+  - [X] The game should detect a win or a draw and display an appropriate message.
+  - [X] There should be a "Reset" button to start a new game.
+2. Technical Requirements:
+  - [X] Use Next.js for the application framework.
+  - [X] Use React for the frontend components.
+  - [X] State management should be handled using React's useState or useReducer.
+  - [X] Styling can be done using CSS modules or styled-components.
+  - [X] Implement unit tests using a testing framework like Jest with React Testing Library.
+3. Unit Testing Requirements:
+  - [X] Test the rendering of the Tic Tac Toe grid.
+  - [X] Test the functionality of marking cells with "X" and "O".
+  - [X] Test the win conditions (rows, columns, and diagonals).
+  - [X] Test the draw condition.
+  - [X] Test the "Reset" button functionality.
+
+### Bonus Points
+  - [X] Use TypeScript for type safety.
+  - [X] Implement a simple AI to play against the user.
+  - [X] Add animations for a better user experience.
+
+## Technology Stack
+
+- React
+- Next.js - Pages Router
+- Jest
+- TypeScript
+- CSS Modules
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js
+- yarn
+
+### Installation
+
+To install and run the application, you can use the following commands:
+
+1. Clone the Github repository to your local machine:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/b3am-dev/tic-tac-toe.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+cd tic-tac-toe
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Install NPM packages
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Running the application
+1. Start the development server
+```bash
+yarn dev
+```
 
-## Learn More
+2. Open your browser and go to [http://localhost:3000](http://localhost:3000) to play the game.
 
-To learn more about Next.js, take a look at the following resources:
+### Running the tests
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+yarn test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To generate coverage report for the unit tests, use the following command:
 
-## Deploy on Vercel
+```bash
+yarn test --coverage
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Design Decisions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **React Hooks**: The application uses React's functional component style and hooks (useState, useEffect, useCallback) for managing state and side effects.
+- **Game Logic Separation**: The gameLogic module encapsulates the core game rules, keeping the Board component focused on UI and interaction.
+- **Client-Side Rendering ('use client')**: Indicates the components are rendered on the client-side for better interactivity.
+
+## Possible improvements
+
+- UI Enhancements: Consider adding more visual flair or animations to the game interface.
+- Difficulty Levels: Allow the user to adjust the AI's difficulty level.
